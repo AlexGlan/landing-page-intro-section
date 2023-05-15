@@ -1,0 +1,192 @@
+:root {
+    --ff-sans--poppins: 'Poppins', sans-serif;
+    --ff-sans-open-sans: 'Open Sans', sans-serif;
+ 
+    --fw-regular: 400;
+    --fw-bold: 600;
+ 
+    --clr-light: white;
+    --clr-primary: hsl(257, 40%, 49%);
+    --clr-accent: hsl(300, 69%, 71%);
+    
+    --fs-h1: 1.7rem;
+    --fs-h1-desktop: 2.3rem;
+    --fs-body: 1rem;
+    --fs-body-desktop: 1.2rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Typography */
+
+body {
+    font-family: var(--ff-sans-open-sans);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
+    color: var(--clr-light);
+}
+
+h1 {
+    font-family: var(--ff-sans--poppins);
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
+}
+
+.hero__header {
+    text-align: center;
+    margin-bottom: .8rem;
+}
+.hero__subhead {
+    text-align: center;
+    line-height: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+
+.btn {
+    cursor: pointer;
+    color: var(--clr-primary);
+    background-color: var(--clr-light);
+    font-family: var(--ff-sans--poppins);
+    font-size: .8rem;
+    padding: .6em 5.4em .6em 5.4em;
+    border-radius: 2rem;
+    border: solid 0px var(--clr-light);
+    box-shadow: 0px 2px 5px 0 hsla(229, 23%, 23%, 0.6);
+}
+
+/* Landing Page Styles */
+
+body {
+    background-image: url(../images/bg-mobile.svg);
+    background-color: var(--clr-primary);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.landing-page {
+    width: 80%;
+    height: 100vh;
+}
+
+.logo__img {
+    width: 40%;
+    max-width: 165px;
+    height: auto;
+    margin-top: 1.5rem;
+}
+
+.hero__img {
+    width: 100%;
+    max-width: 500px;
+    margin: 3rem auto 3rem auto;
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 4.2rem 0 2rem 0;
+}
+
+.fab {
+    font-size: 1.6em;
+    width: 1.6em;
+    text-align: center;
+    line-height: 1.6em;
+    color: var(--clr-light);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Dekstop Version */
+
+@media (min-width: 1300px) {
+    /* Hover effects */
+    .btn:hover {
+        transform: scale(1.1);
+        color: var(--clr-light);
+        background-color: var(--clr-accent);
+    }
+
+    .fab:hover {
+        color: var(--clr-accent);
+        transform: scale(1.1);
+    }
+
+    /* Main Styles */
+
+    body {
+        background-image: url(../images/bg-desktop.svg);
+        font-size: var(--fs-body-desktop);
+    }
+
+    h1 {
+        font-size: var(--fs-h1-desktop);
+    }
+
+    .landing-page {
+        width: 90%;
+    }
+
+    .logo__img {
+        max-width: 210px;
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero__header {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    .hero__subhead {
+        text-align: left;
+        margin-bottom: 1.7rem;
+    }
+
+    .hero__img {
+        max-width: unset;
+        margin: 4.2rem auto 0 auto;
+    }
+
+    .hero__right-col {
+        width: 40%;
+        margin-left: 4rem;
+    }
+
+    .button-container {
+        justify-content: start;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: .75em 3.7em .75em 3.7em;
+    }
+
+    .social-list {
+        margin: 0;
+        justify-content: end;
+    }
+}
